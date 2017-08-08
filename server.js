@@ -67,16 +67,10 @@ function createTemplate(data)
     var htmlTemplate = `
     <html>
     <head>
-        
         <title> ${title}</title>
-        
         <meta name="viewport" content="width=device-width initial-scale=1"/>
-        
         <link href="/ui/style.css" rel="stylesheet" />
-        
     </head>
-    
-    
     <body>
         <div class="container">
             <div>
@@ -100,16 +94,13 @@ function createTemplate(data)
     
 return htmlTemplate;    
 }
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 app.get('/ui/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-
-
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
