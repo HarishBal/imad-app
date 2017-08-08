@@ -11,6 +11,7 @@ button.onclick = function()
     
     // Render the variable in the correct span
     
+    console.log("Clicked");
     
     counter = counter + 1;
     
