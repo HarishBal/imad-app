@@ -39,8 +39,7 @@ request.send(null);
 
 // Submit name
 
-var nameInput=document.getElementById('name');
-var name = nameInput.value;
+
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function()
@@ -77,7 +76,9 @@ request.onreadystatechange=function()
         }
         // Not done yet
     } ;   
-    
+var nameInput=document.getElementById('name');
+var name = nameInput.value;
+
  // Make the request
 request.open('GET', 'http://harishbalakrishna.imad.hasura-app.io/submit-name?name='+name, true);
 
