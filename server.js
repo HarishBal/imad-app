@@ -119,10 +119,26 @@ app.get('/counter', function (req, res) {
 });
 
 var names = [];
+/*
+// Following is a method to pass a values to the URL and return back as a jason result
+
 app.get('/submit-name/:name', function (req, res) {
   // Get the name from the request
   
   var name = req.params.name;;
+  
+  names.push(name);
+  
+  res.send(JSON.stringify(names));
+});
+*/
+
+// Following is another method using query string
+// This will use a foirmat something like url/submit-name?name=xxx
+app.get('/submit-name', function (req, res) {
+  // Get the name from the request
+  
+  var name = req.query.name;;
   
   names.push(name);
   
