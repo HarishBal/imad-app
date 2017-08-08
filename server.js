@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
+/*
 var articles={
     'article-one':{
     	title:"Article One", 
@@ -94,10 +94,13 @@ function createTemplate(data)
     
 return htmlTemplate;    
 }
+
 app.get('/ui/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
+*/
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
