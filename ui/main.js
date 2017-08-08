@@ -3,12 +3,12 @@ console.log('Loaded!');
 
 //Change the text in main-text id
 
-var element=document.getElementById('main-text');
+//var element=document.getElementById('main-text');
 
-element.innerHTML="New Value";
+//element.innerHTML="New Value";
 
 //Move the image 
-
+/*
 var img = document.getElementById('madi');
 
 var margineLeft = 0;
@@ -26,4 +26,4 @@ img.onclick = function(){
     //img.style.marginleft = '100px';
     
 };
-
+*/
