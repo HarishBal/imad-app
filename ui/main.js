@@ -12,6 +12,7 @@ element.innerHTML="New Value";
 var img = document.getElementById('madi');
 
 img.onclick = function(){
+    console.log('Clicked!');
     img.style.marginleft = '100px';
     
 };
