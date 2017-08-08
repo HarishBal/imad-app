@@ -15,14 +15,14 @@ var margineLeft = 0;
 
 function moveRight()
 {
-    margineLeft = margineLeft + 10;
+    margineLeft = margineLeft +5;
     
     img.style.marginLeft = margineLeft + 'px';
 }
 
 img.onclick = function(){
     console.log('Clicked!');
-    var interval = setInterval(moveRight, 100);
+    var interval = setInterval(moveRight,50);
     //img.style.marginleft = '100px';
     
 };
