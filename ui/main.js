@@ -60,7 +60,7 @@ request.onreadystatechange=function()
             {
             // capture a list of names and render it as a list
             
-            var names=request.responsetext;
+            var names=request.responseText;
             
             names = JSON.parse();
             
