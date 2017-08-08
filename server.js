@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    articleone:{
+    'article-one':{
     	title:"Article One", 
     	heading:"Article One",
     	date:"8 Aug 2017", 
@@ -28,7 +28,7 @@ var articles={
                     Maecenas sit amet ligula porttitor, vehicula justo sed, interdum tellus. Curabitur vel est elit. Suspendisse ullamcorper, velit at fermentum euismod, sapien mi interdum nunc, sit amet vulputate elit mi sed massa. Donec tincidunt lectus non erat vehicula, eu venenatis purus accumsan. Curabitur aliquet commodo velit sed ultricies. Etiam gravida suscipit nunc sit amet faucibus. Ut finibus massa eget orci ultrices, ac convallis elit facilisis. Nam tincidunt ipsum et egestas venenatis. Proin enim nibh, ultricies nec porta gravida, egestas in mi. Aenean et felis massa.
                 </p>`
         },
-    articletwo:{
+    'article-two':{
 	title:"Article Two", 
 	heading:"Article Two",
 	date:"10 Aug 2017", 
@@ -41,7 +41,7 @@ var articles={
                 Maecenas sit amet ligula porttitor, vehicula justo sed, interdum tellus. Curabitur vel est elit. Suspendisse ullamcorper, velit at fermentum euismod, sapien mi interdum nunc, sit amet vulputate elit mi sed massa. Donec tincidunt lectus non erat vehicula, eu venenatis purus accumsan. Curabitur aliquet commodo velit sed ultricies. Etiam gravida suscipit nunc sit amet faucibus. Ut finibus massa eget orci ultrices, ac convallis elit facilisis. Nam tincidunt ipsum et egestas venenatis. Proin enim nibh, ultricies nec porta gravida, egestas in mi. Aenean et felis massa.
             </p>`
 },
-    articlethree:{
+    'article-three':{
 	title:"Article Three", 
 	heading:"Article Three",
 	date:"10 Aug 2017", 
