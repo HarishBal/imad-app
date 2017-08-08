@@ -126,7 +126,7 @@ app.get('/submit-name/:name', function (req, res) {
   
   names.push(name);
   
-  res.send(JASON.stringfy(names));
+  res.send(JSON.stringfy(names));
 });
 
 app.get('/ui/:articleName', function (req, res) {
