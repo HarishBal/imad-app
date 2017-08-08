@@ -1,5 +1,18 @@
 console.log('Loaded!');
 
-var element=document.getElementById('main-text')
+
+//Change the text in main-text id
+
+var element=document.getElementById('main-text');
 
 element.innerHTML="New Value";
+
+//Move the image 
+
+var img = document.getElementByID('madi');
+
+img.onclick = function(){
+    img.style.marginleft = '100px';
+    
+};
+
