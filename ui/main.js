@@ -22,7 +22,7 @@ function moveRight()
 
 img.onclick = function(){
     console.log('Clicked!');
-    var interval = setInterval(moveRightt, 100);
+    var interval = setInterval(moveRight, 100);
     //img.style.marginleft = '100px';
     
 };
