@@ -17,5 +17,5 @@ button.onclick = function()
     
     var span=document.getElementById('count');
     
-    span.innerHTML = counter.ToStrong();
+    span.innerHTML = counter.ToString();
 };
