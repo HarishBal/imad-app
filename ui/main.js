@@ -77,7 +77,7 @@ request.onreadystatechange=function()
     } ;   
     
  // Make the request
-request.open('GET', 'http://harishbalakrishna.imad.hasura-app.io/submit-list', true);
+request.open('GET', 'http://harishbalakrishna.imad.hasura-app.io/submit-name?name='+name, true);
 
 request.send(null);
     
