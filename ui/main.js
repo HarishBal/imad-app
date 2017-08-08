@@ -31,7 +31,7 @@ request.onreadystatechange=function()
 console.log("Clicked");
 
 // Make the request
-request.open('GET', 'ttp://harishbalakrishna.imad.hasura-app.io/counter', true);
+request.open('GET', 'http://harishbalakrishna.imad.hasura-app.io/counter', true);
 
 request.send(null);
 };
