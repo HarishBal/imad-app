@@ -1,29 +1,20 @@
-console.log('Loaded!');
+var button=document.getElementById('counter');
 
 
-//Change the text in main-text id
+var counter = 0;
 
-//var element=document.getElementById('main-text');
-
-//element.innerHTML="New Value";
-
-//Move the image 
-/*
-var img = document.getElementById('madi');
-
-var margineLeft = 0;
-
-function moveRight()
+button.onclick = function()
 {
-    margineLeft = margineLeft +5;
+    // Make a request to the counter end point
     
-    img.style.marginLeft = margineLeft + 'px';
-}
-
-img.onclick = function(){
-    console.log('Clicked!');
-    var interval = setInterval(moveRight,50);
-    //img.style.marginleft = '100px';
+    // Capture the response and store it in a variable
     
+    // Render the variable in the correct span
+    
+    
+    counter = counter + 1;
+    
+    var span=document.getElementById('count');
+    
+    span.innerHTML = counter.ToStrong();
 };
-*/
