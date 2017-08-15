@@ -126,7 +126,7 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-var pool = new Pool(config);
+var pool = new pool(config);
 app.get('/test-db', function (req, res) {
   //make a select request
   pool.query('SELECT * from test', function(err, result){
