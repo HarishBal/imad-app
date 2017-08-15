@@ -181,7 +181,7 @@ app.get('/articles/:articleName', function (req, res) {
     console.log(req.params.articleName);
   
   //var articleName = req.params.articleName;
-  pool.query("SELECT * from articles where title = '" + req.params.articleName + "'", function(err, result){
+  pool.query("SELECT * from article where title = '" + req.params.articleName + "'", function(err, result){
       if(err){
         res.status(500).send(err.toString());
       } else{
@@ -195,28 +195,6 @@ app.get('/articles/:articleName', function (req, res) {
   });
   
 });
-
-app.get('/arti', function (req, res) {
-
-  pool.query("SELECT * from articles", function(err, result){
-      if(err){
-        res.status(500).send(err.toString());
-      } else{
-            if(result.rows.length ===0){
-               res.status(404).send('Article not Found'); 
-            } else {
-                var artileData = result.rows[0];
-                res.send(createTemplate(articleData));
-            }
-      } 
-  });
-  
-});
-
-
-
-
-
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
