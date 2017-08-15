@@ -131,8 +131,6 @@ app.get('/test-db', function (req, res) {
   //make a select request
   pool.query('SELECT * from test', function(err, result){
       if(err){
-          console.log("Error occurred");
-          console.log(err.toString());
         res.status(500).send(err.toString());
       } else{
         res.send(JASON.stringify(result));   
