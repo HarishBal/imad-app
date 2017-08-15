@@ -196,7 +196,7 @@ app.get('/articles/:articleName', function (req, res) {
   
 });
 
-app.get('/articles', function (req, res) {
+app.get('/arti', function (req, res) {
 
   pool.query("SELECT * from articles", function(err, result){
       if(err){
