@@ -181,7 +181,43 @@ app.get('/articles/:articleName', function (req, res) {
     console.log(req.params.articleName);
   
   //var articleName = req.params.articleName;
-  pool.query("SELECT * from article where title = '" + req.params.articleName + "'", function(err, result){
+  
+  /*
+  The following way of coding can be used to hack a database
+  
+  Here we are expecting an article name to show
+  
+  but an intelegent hacker can pass a malecious code instead of it
+  
+  for example, 
+  instead of passing a genuine url as following,
+  http://harishbalakrishna.imad.hasura-app.io/articles/article-three
+  one can pass something similar as follows,
+  
+  http://harishbalakrishna.imad.hasura-app.io/articles/' delete from "article' where 'a' = 'a
+  
+  here the things you have to notice are following
+  
+  1. the url is formed as http://harishbalakrishna.imad.hasura-app.io/articles/'
+     that means we are expecting an article name and we start it with a ' in our code
+     but the hacker himself pass a single code delebratly and our code becomes 
+     SELECT * from article where title = ''
+    2. the second part begins from here,
+     delete from "article' where 'a' = 'a
+     in our code we put a closing '
+     so the delete query becomes valid
+     and the backend database execute the delete command for all rows and deletes all records
+     
+
+    but all good libraries provides enough meassurements to prevent such attacks
+    
+    they are providing parameterised query executions to prevent such situations
+    
+    the actual code implemented such mechanism
+  */
+  //pool.query("SELECT * from article where title = '" + req.params.articleName + "'", function(err, result){
+  
+    pool.query("SELECT * from article where title = $1", [req.params.articleName], function(err, result){
       if(err){
         res.status(500).send(err.toString());
       } else{
