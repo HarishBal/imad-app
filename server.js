@@ -128,7 +128,7 @@ app.get('/counter', function (req, res) {
 
 var pool = new pool(config);
 app.get('/test-db', function (req, res) {
-   log('request received');
+    onsole.log('request received');
   //make a select request
   pool.query('SELECT * from test', function(err, result){
       if(err){
