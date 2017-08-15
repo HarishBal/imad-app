@@ -130,14 +130,13 @@ var pool = new pool(config);
 app.get('/test-db', function (req, res) {
   //make a select request
   pool.query('SELECT * from test', function(err, result){
-      if(err)
-        {
+      if(err){
+          console.log("Error occurred");
+          console.log(err.toString());
         res.status(500).send(err.toString());
-        }
-    else
-        {
-         res.send(JASON.stringify(result));   
-        }
+      } else{
+        res.send(JASON.stringify(result));   
+      }
   });
   //return a response with the results
 });
